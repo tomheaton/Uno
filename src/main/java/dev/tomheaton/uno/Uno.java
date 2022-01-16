@@ -17,7 +17,7 @@ public class Uno {
         Card wild = new SpecialCard(CardColour.BLACK, CardType.WILD);
         Card wildDraw = new SpecialCard(CardColour.BLACK, CardType.WILD_DRAW);
 
-        Player playerOne = new Player(1);
+        Player playerOne = new Player();
 
         // start game:
         CardDeck cardDeck = new CardDeck();

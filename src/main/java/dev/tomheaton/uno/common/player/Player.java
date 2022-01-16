@@ -1,14 +1,16 @@
 package dev.tomheaton.uno.common.player;
 
+import java.util.UUID;
+
 public class Player {
 
-    public int id;
+    public UUID id;
 
-    public Player(int id) {
-        this.id = id;
+    public Player() {
+        this.id = UUID.randomUUID();
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 }
