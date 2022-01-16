@@ -38,11 +38,7 @@ public class CardDeck {
 
     public void print() {
         for (Card card : cards) {
-            if (card instanceof NumberCard numberCard) {
-                System.out.printf("card { colour: %s, number: %d }\n", numberCard.getColour(), numberCard.number);
-            } else {
-                System.out.printf("card { colour: %s, type: %s }\n", card.getColour(), card.getType());
-            }
+            System.out.println(card);
         }
     }
 

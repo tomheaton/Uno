@@ -8,4 +8,13 @@ public class NumberCard extends Card {
         super(colour, CardType.NUMBER);
         this.number = number;
     }
+
+    public int getNumber() {
+        return number;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Card: { Colour: %s, Number: %d }", getColour(), getNumber());
+    }
 }

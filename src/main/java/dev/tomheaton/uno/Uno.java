@@ -4,6 +4,8 @@ import dev.tomheaton.uno.common.card.*;
 import dev.tomheaton.uno.common.deck.CardDeck;
 import dev.tomheaton.uno.common.player.Player;
 
+import java.util.Stack;
+
 public class Uno {
 
     public static void main(String[] args) {
@@ -21,6 +23,13 @@ public class Uno {
         CardDeck cardDeck = new CardDeck();
         cardDeck.initialise();
 //        cardDeck.shuffle();
-//        cardDeck.print();
+        cardDeck.print();
+
+        Stack<Card> stack = new Stack<>();
+        stack.push(blueOne);
+        stack.push(redReverse);
+        System.out.println(stack);
+        stack.push(wild);
+        System.out.println(stack);
     }
 }
