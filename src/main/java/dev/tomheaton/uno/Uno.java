@@ -1,6 +1,7 @@
 package dev.tomheaton.uno;
 
 import dev.tomheaton.uno.common.card.*;
+import dev.tomheaton.uno.common.deck.CardDeck;
 import dev.tomheaton.uno.common.player.Player;
 
 public class Uno {
@@ -15,5 +16,11 @@ public class Uno {
         Card wildDraw = new SpecialCard(CardColour.BLACK, CardType.WILD_DRAW);
 
         Player playerOne = new Player(1);
+
+        // start game:
+        CardDeck cardDeck = new CardDeck();
+        cardDeck.initialise();
+//        cardDeck.shuffle();
+//        cardDeck.print();
     }
 }
