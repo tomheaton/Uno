@@ -1,6 +1,6 @@
 package dev.tomheaton.uno;
 
-public class Main {
+public class Uno {
 
     public static void main(String[] args) {
         System.out.println("Uno");
