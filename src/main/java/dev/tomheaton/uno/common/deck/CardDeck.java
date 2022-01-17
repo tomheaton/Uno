@@ -36,13 +36,11 @@ public class CardDeck {
         }
     }
 
-    public void print() {
-        for (Card card : cards) {
-            System.out.println(card);
-        }
-    }
-
     public void shuffle() {
         Collections.shuffle(cards, new Random());
+    }
+
+    public Card getRandomCard() {
+        return cards.remove(cards.size() - 1);
     }
 }

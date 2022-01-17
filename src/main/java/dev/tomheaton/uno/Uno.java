@@ -1,35 +1,26 @@
 package dev.tomheaton.uno;
 
-import dev.tomheaton.uno.common.card.*;
-import dev.tomheaton.uno.common.deck.CardDeck;
 import dev.tomheaton.uno.common.player.Player;
-
-import java.util.Stack;
+import dev.tomheaton.uno.server.GameManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Uno {
+
+    public static final Logger LOGGER = LogManager.getLogger("uno");
 
     public static void main(String[] args) {
         System.out.println("Uno");
 
-        // Testing:
-        Card blueOne = new NumberCard(CardColour.BLUE, 1);
-        Card redReverse = new SpecialCard(CardColour.RED, CardType.REVERSE);
-        Card wild = new SpecialCard(CardColour.BLACK, CardType.WILD);
-        Card wildDraw = new SpecialCard(CardColour.BLACK, CardType.WILD_DRAW);
+        GameManager gameManager = new GameManager();
 
-        Player playerOne = new Player();
+        gameManager.addPlayer(new Player());
+        gameManager.addPlayer(new Player());
+        gameManager.addPlayer(new Player());
+        gameManager.addPlayer(new Player());
 
-        // start game:
-        CardDeck cardDeck = new CardDeck();
-        cardDeck.initialise();
-//        cardDeck.shuffle();
-        cardDeck.print();
+        gameManager.startGame();
 
-        Stack<Card> stack = new Stack<>();
-        stack.push(blueOne);
-        stack.push(redReverse);
-        System.out.println(stack);
-        stack.push(wild);
-        System.out.println(stack);
+        System.out.println(gameManager);
     }
 }
