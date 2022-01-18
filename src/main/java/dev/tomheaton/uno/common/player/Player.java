@@ -1,6 +1,8 @@
 package dev.tomheaton.uno.common.player;
 
+import dev.tomheaton.uno.common.DiscardPile;
 import dev.tomheaton.uno.common.card.Card;
+import dev.tomheaton.uno.common.deck.CardDeck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +31,13 @@ public class Player {
         hand.add(card);
     }
 
-    public void playCard() {
-
+    public void playCard(DiscardPile discardPile, Card card) {
+        discardPile.discardCard(card);
     }
 
-    public void drawCard() {
-
+    public void drawCard(CardDeck deck) {
+        Card card = deck.getRandomCard();
+        hand.add(card);
     }
 
     @Override

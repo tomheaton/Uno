@@ -21,6 +21,7 @@ public class DiscardPile {
         Card topCard = discardPile.peek();
 
         if (topCard.getColour().equals(card.getColour()) || topCard.getType().equals(card.getType())) {
+            discardPile.push(card);
             return true;
         }
 
